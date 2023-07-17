@@ -13,3 +13,10 @@ actions-riff-raff has completed.
 
 You should not use this action after migration is complete, as it will fail if
 the builds are not identical (ie if the code has changed).
+
+### Running locally
+
+You can run this script with riff-raff read-only credentials by:
+- grabbing the credentials from Janus, setting the correct profile
+- installing the dependencies with `pip install -r requirements.txt`
+- running `python3 compare.py <stack>::<app> <build1> <build2>`.
