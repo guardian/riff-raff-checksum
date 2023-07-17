@@ -35,3 +35,4 @@ runs:
     - name: Run the compare script
       run: python3 compare.py ${{ inputs.projectName }} ${{ inputs.teamCityMainBuildNumber }} ${{ inputs.currentBuildNumber }} 
       shell: bash
+      
