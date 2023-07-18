@@ -19,8 +19,11 @@ You can run this script with riff-raff read-only credentials by:
 
 ### Running as an Action
 
-Prerequisites: This action requires the use of the `aws-actions/configure-aws-credentials`
-action, using `GU_RIFF_RAFF_CHECKSUM_ROLE_ARN`.
+Prerequisites:
+This action requires the use of the `aws-actions/configure-aws-credentials`
+action, using `GU_RIFF_RAFF_CHECKSUM_ROLE_ARN`. 
+>**Warning**
+>Your repo needs to have a production tag, otherwise this stage will fail
 
 When running in CI, the first build number is the most recent build TeamCity
 performed on the main branch. The second build number is the build number of
