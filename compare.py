@@ -14,7 +14,7 @@ def compare(project: str, b1: int, b2: int):
   print('Creating S3 client')
   s3Client = boto3.client(
     's3',
-    'eu-west-1',
+    Region='eu-west-1',
     aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
     aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY'),
     aws_session_token=os.environ.get('AWS_SESSION_TOKEN'))
