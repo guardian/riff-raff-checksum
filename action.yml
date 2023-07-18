@@ -14,8 +14,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Do we need this
+    - name: Checkout the checksum repo
       uses: actions/checkout@v3
+      with:
+        repository: 'guardian/riff-raff-checksum' #otherwise it will pull the repo that triggered the action
 
     - name: Setup Python 3.11
       uses: actions/setup-python@v4
@@ -27,6 +29,6 @@ runs:
       shell: bash
       
     - name: Run the compare script
-      run: python3 compare.py ${{ inputs.projectName }} ${{ inputs.teamCityMainBuildNumber }} ${{ inputs.currentBuildNumber }} 
+      run: python3 compare.py ${{ inputs.projectName }} ${{ inputs.teamCityMainBuildNumber }} ${{ inputs.currentBuildNumber }}
       shell: bash
       
